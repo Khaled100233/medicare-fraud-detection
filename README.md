@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # medicare-fraud-detection
 =======
 # Healthcare Provider Fraud Detection
