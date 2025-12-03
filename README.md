@@ -25,15 +25,20 @@ Healthcare fraud costs the U.S. over $68 billion annually. This project develops
 
 | Metric | Score |
 |--------|-------|
-| **Precision** | 0.XXX |
-| **Recall** | 0.XXX |
-| **F1-Score** | 0.XXX |
-| **ROC-AUC** | 0.XXX |
-| **PR-AUC** | 0.XXX |
+| **Precision** | 0.5394 |
+| **Recall** | 0.8812 |
+| **F1-Score** | 0.6692 |
+| **ROC-AUC** | 0.9690 |
+| **PR-AUC** | 0.7530 |
 
-**Best Model:** [Model Name]
+**Best Model:** Random Forest Classifier
 
-**Business Impact:** $X.XX million estimated savings from fraud prevention
+**Business Impact:** $6.72 million estimated net benefit from fraud prevention
+
+**Test Set Performance:**
+- Successfully detected **88.1%** of fraudulent providers (89 out of 101)
+- **53.9%** precision (of flagged providers, 53.9% are actually fraudulent)
+- ROI: **815%** return on investigation costs
 
 ---
 
@@ -126,27 +131,36 @@ jupyter notebook notebooks/03_evaluation.ipynb
 
 ### 3. Model Development
 Trained and compared 4 models:
-- Logistic Regression (interpretability baseline)
-- Decision Tree (simple non-linear)
-- Random Forest (robust ensemble)
-- Gradient Boosting (advanced ensemble)
+- **Logistic Regression** - Precision: 0.442, Recall: 0.802, F1: 0.570
+- **Decision Tree** - Precision: 0.462, Recall: 0.753, F1: 0.573
+- **Random Forest** ⭐ - Precision: 0.539, Recall: 0.881, F1: 0.669 (Best)
+- **Gradient Boosting** - Precision: 0.500, Recall: 0.691, F1: 0.580
 
 ### 4. Evaluation Strategy
-- Train/Validation/Test split (60/20/20)
+- Train/Test split (80/20) with stratification
+- Validation split from training data (80/20)
 - Metrics: Precision, Recall, F1, ROC-AUC, PR-AUC
-- Cost-benefit analysis
-- Comprehensive error analysis with case studies
+- Cost-benefit analysis with realistic cost estimates
+- Comprehensive error analysis:
+  - 76 False Positives (legitimate providers flagged)
+  - 12 False Negatives (fraudulent providers missed)
+  - Detailed case studies for improvement insights
 
 ---
 
 ## 🔍 Key Findings
 
 ### Most Important Features
-1. Total reimbursement amounts (inpatient/outpatient)
-2. Number of claims per provider
-3. Number of deceased patients
-4. Average patient age
-5. Unique diagnosis/procedure codes
+1. **Inpatient Maximum Length of Stay** (12.3% importance)
+2. **Inpatient Total Length of Stay** (8.8% importance)
+3. **Inpatient Average Claims per Beneficiary** (5.8% importance)
+4. **Inpatient Number of Beneficiaries** (5.7% importance)
+5. **Inpatient Number of Claims** (4.9% importance)
+6. **Inpatient Unique Procedures** (4.5% importance)
+7. **Inpatient Total Reimbursed Amount** (4.3% importance)
+8. **Chronic Conditions Count** (outpatient) (3.1% importance)
+9. **Renal Disease Indicator** (3.0% importance)
+10. **Outpatient Unique Diagnoses** (2.7% importance)
 
 ### Error Analysis Insights
 
@@ -170,10 +184,15 @@ Trained and compared 4 models:
 
 ## 💼 Business Impact
 
-- **Fraud Detection Rate:** XX% of fraudulent providers identified
-- **Investigation Efficiency:** Reduced false positives by XX%
-- **Estimated Savings:** $X.X million annually
-- **ROI:** X:1 return on investigation costs
+- **Fraud Detection Rate:** 88.1% of fraudulent providers identified (89 out of 101)
+- **Investigation Efficiency:** 165 providers flagged for investigation (vs. 1,082 total)
+- **Estimated Net Benefit:** $6.72 million from fraud prevention
+- **ROI:** 8.15:1 return on investigation costs (815% ROI)
+- **Cost Savings:**
+  - Fraud prevented: $8.9 million (89 caught × $100k each)
+  - Investigation cost: $0.825 million (165 investigated × $5k each)
+  - Missed fraud cost: $1.2 million (12 missed × $100k each)
+  - False positive cost: $0.532 million (76 cases × $7k each)
 
 ---
 
