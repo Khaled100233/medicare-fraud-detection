@@ -1,0 +1,2 @@
+Model,Test_Samples,Fraud_Cases,Legitimate_Cases,Precision,Recall,F1_Score,ROC_AUC,PR_AUC,True_Positives,False_Positives,True_Negatives,False_Negatives,Net_Benefit_USD,Investigation_Cost_USD,ROI_Percent
+RandomForestClassifier,1082,101,981,0.5393939393939394,0.8811881188118812,0.6691729323308271,0.9690455284060517,0.7529771304290782,89,76,905,12,6723000,825000,814.9090909090909
