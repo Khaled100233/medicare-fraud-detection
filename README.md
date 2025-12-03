@@ -1,6 +1,6 @@
-=======
+
 # medicare-fraud-detection
-=======
+
 # Healthcare Provider Fraud Detection
 
 **Team Members:** [Add your team members here]
