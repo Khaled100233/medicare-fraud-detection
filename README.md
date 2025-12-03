@@ -217,27 +217,16 @@ pip install pandas numpy scikit-learn imbalanced-learn matplotlib seaborn jupyte
 
 ## 👥 Team Contributions
 
-| Member | Responsibilities |
+| Member | email |
 |--------|-----------------|
-| [Name 1] | Data exploration, feature engineering |
-| [Name 2] | Model development, hyperparameter tuning |
-| [Name 3] | Evaluation, error analysis |
-| [Name 4] | Documentation, presentation |
+| Khaled Ehab Attia Hussein | khaled.attia@giu-uni.de |
+| Nirvana Saeed | Nirvana.Saeed@giu-uni.de |
 
 ---
 
 ## 📝 License
 
 This project is for academic purposes as part of the Machine Learning course at German International University of Applied Sciences.
-
----
-
-## 📧 Contact
-
-For questions or feedback:
-- Email: [khaled.ehab@student.giu-uni.de]
-- Course: ICS504 Machine Learning, Winter 2025
-- Lecturer: Dr. Caroline Sabty
 
 ---
 
@@ -248,6 +237,3 @@ For questions or feedback:
 - Course instructors and TAs for guidance
 
 ---
-
-**Last Updated:** December 2, 2025
->>>>>>> 5bc523bbaa073604f1b8e0d67b184ba0ed7d4352
